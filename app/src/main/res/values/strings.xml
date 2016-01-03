@@ -4,4 +4,12 @@
     <string name="hello_world">Hello DragonBoard 410c! 10:31am</string>
     <string name="debug_1">debug_1</string>
     <string name="test_1">Test 1</string>
+
+    <string-array name="spin1_data">
+        <item>data1</item>
+        <item>data2</item>
+        <item>data3</item>
+        <item>data4</item>
+        <item>data5</item>
+    </string-array>
 </resources>

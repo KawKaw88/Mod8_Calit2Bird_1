@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.util.Log;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClickTest1(View view)
     {
         Log.v("MainActivity","onClickTest1() - Start");
-
+        
+        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+        String str1 = String.valueOf(spinner.getSelectedItem());
+        Log.v("MainActivity",str1);
 
         Log.v("MainActivity","onClickTest1() - End");
     }
