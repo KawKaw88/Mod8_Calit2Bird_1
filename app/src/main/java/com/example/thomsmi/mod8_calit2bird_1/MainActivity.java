@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +49,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClickTest1(View view)
+    {
+        Log.v("MainActivity","onClickTest1() - Start");
+
+
+        Log.v("MainActivity","onClickTest1() - End");
     }
 }
