@@ -22,6 +22,8 @@ public class GameProcessor extends Thread {
      * Name:        GameProcessor
      * Description: Constructor for GameProcessor. The constructor initializes
      *              the private instances for the class and begins renderer.
+     *
+     *              Using Dependency Injection (DI, constructor injection)
      */
     public GameProcessor(Inputtable input, Renderable renderer) {
         this.renderer = renderer;
@@ -53,12 +55,15 @@ public class GameProcessor extends Thread {
             time = System.currentTimeMillis();
 
             // Determines if CaliBird moves up or down
+            // input
             if (input.getInputState()) {
+                // input is true, user attempts to increment
                 if (!caliBird.incrementY()) {
                     caliBird.decrementY();
                 }
                 input.setInputState(false);
             } else if (!caliBird.decrementY()) {
+                // input is false, user attempts to decrement, AND not allowed to decrement
                 map.removeCaliBird();
                 input.setRunningState(false);
                 break;
@@ -79,6 +84,7 @@ public class GameProcessor extends Thread {
             // Check for collisions
             if (map.collisions()) {
                 input.setRunningState(false);
+                // exit while, thread ends
                 break;
             }
 
@@ -88,11 +94,13 @@ public class GameProcessor extends Thread {
             }
 
             // Display the image
+            // output
             renderer.render(data, score);
 
             // Make Thread sleep to simulate the frame rate
             long difference = System.currentTimeMillis() - time;
             if (difference > SLEEP_TIME) {
+                // give up time to OS, even though zero sleep
                 sleepTime(0);
             } else {
                 sleepTime(SLEEP_TIME - difference);
