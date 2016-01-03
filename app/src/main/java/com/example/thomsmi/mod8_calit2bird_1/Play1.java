@@ -26,9 +26,16 @@ public class Play1
         for (String item : data1)
         {
             i++;
-            String str1 = String.format("%d", i);
+            // Note: [CTRL-/] will toggle line comment for selected text.
+
+//            String str1 = String.format("%d", i);
+//            Log.v("Play1", str1);
+//            Log.v("Play1", item);
+//            String str2 = String.format("%s", item);
+//            Log.v("Play1", str2);
+
+            String str1 = String.format("%d %s", i, item);
             Log.v("Play1", str1);
-            Log.v("Play1", item);
         }
 
         Log.v("Play1","DoSomething() - End");
