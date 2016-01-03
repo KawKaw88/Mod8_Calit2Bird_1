@@ -55,10 +55,13 @@ public class MainActivity extends AppCompatActivity {
     public void onClickTest1(View view)
     {
         Log.v("MainActivity","onClickTest1() - Start");
-        
+
         Spinner spinner = (Spinner) findViewById(R.id.spinner1);
         String str1 = String.valueOf(spinner.getSelectedItem());
         Log.v("MainActivity",str1);
+
+        Play1 play = new Play1();
+        play.DoSomething();
 
         Log.v("MainActivity","onClickTest1() - End");
     }
