@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickTest1(View view)
     {
-        Log.v("MainActivity","onClickTest1() - Start");
+        Log.v("MainActivity","onClickTest1() - Start 4:12pm");
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner1);
         String str1 = String.valueOf(spinner.getSelectedItem());
