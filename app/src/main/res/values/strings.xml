@@ -12,4 +12,14 @@
         <item>data4</item>
         <item>data5</item>
     </string-array>
+
+    <!-- This is a comment -->
+    <!-- $TODO@TJS 1-6-2016 copied-in from class -->
+    <!--
+    <string name="app_name">Calit2 Bird</string>
+     -->
+    <string name="game_over">CaliBird has fallen. Would you like to play again?</string>
+    <string name="restart">Revive CaliBird</string>
+    <string name="score">Score: </string>
+
 </resources>
