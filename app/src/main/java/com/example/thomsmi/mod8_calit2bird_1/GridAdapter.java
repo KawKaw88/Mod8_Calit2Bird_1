@@ -14,6 +14,8 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
+// nothing change 1-25-2016 TJS
+
 /**
  * Name:        GridAdapter
  * Description: Adapter used to populate the GridView of activity_main.xml.
